@@ -315,7 +315,7 @@ console.log("🤖 Telegram Bot is active");
 // Rate Limiter Middleware
 const rateLimiter = async (req, res, next) => {
   try {
-    const telegramId = req.body.telegramId;
+    const telegramId = req.body?.telegramId;
 
     if (!telegramId) {
       return res.status(400).json({
@@ -403,7 +403,7 @@ app.get("/health", (req, res) => {
 // Submit Worker Form
 app.post(
   "/api/workers/submit",
-  rateLimiter,
+  //   rateLimiter,
   upload.array("images", 6),
   async (req, res) => {
     try {
