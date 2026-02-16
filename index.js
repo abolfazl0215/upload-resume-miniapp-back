@@ -110,12 +110,10 @@ const workerSchema = new mongoose.Schema(
     },
     specialty: {
       type: String,
-      required: true,
       trim: true,
     },
     experience: {
       type: String,
-      required: true,
       enum: [
         "beginner",
         "junior",
@@ -131,7 +129,6 @@ const workerSchema = new mongoose.Schema(
     },
     currentlyInArmenia: {
       type: String,
-      required: true,
       enum: ["yes", "no"],
       default: "yes",
     },
