@@ -1,0 +1,7 @@
+serviceAccountKey.json
+google-services.json
+.env
+*.pem
+*.key
+config/keys.js
+node_modules/
